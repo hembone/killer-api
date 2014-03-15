@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'default' => 'mysql',
+	'default' => 'local',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -56,6 +56,17 @@ return array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
 			'database'  => 'database',
+			'username'  => 'root',
+			'password'  => '',
+			'charset'   => 'utf8',
+			'collation' => 'utf8_unicode_ci',
+			'prefix'    => '',
+		),
+		
+		'local' => array(
+			'driver'    => 'mysql',
+			'host'      => 'localhost',
+			'database'  => 'killer-api_db',
 			'username'  => 'root',
 			'password'  => '',
 			'charset'   => 'utf8',
