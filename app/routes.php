@@ -14,6 +14,9 @@
 Route::group(array('prefix' => 'v1'), function()
 {
 
-    Route::controller('users', 'UsersV1Controller');
+    Route::controller('api', 'ApiV1Controller');
 
 });
+
+Route::controller('users', 'UsersController');
+	
