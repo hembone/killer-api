@@ -4,18 +4,24 @@ class UsersController extends BaseController {
 
     public function getIndex()
     {
-        App::abort(404);
+        return View::make('users.login');
     }
 
     public function getCreate()
     {
-    	return View::make('createUser');
+    	return View::make('users.create');
     }
 
     public function postAdd()
     {
-    	$data['post'] = $_POST;
-    	return View::make('addUser', $data);
+    	$input = Input::all();
+
+        $user = new User;
+        $user->email = $input['email'];
+        $user->password = Hash::make($input['password']);
+        $user->save();
+
+    	return Redirect::to('users');
     }
 
 }

@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'default' => 'mysql_local',
+	'default' => 'mysql',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -52,12 +52,12 @@ return array(
 			'prefix'   => '',
 		),
 
-		'mysql_local' => array(
+		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
 			'database'  => 'killer-api_db',
 			'username'  => 'root',
-			'password'  => 'root',
+			'password'  => '',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

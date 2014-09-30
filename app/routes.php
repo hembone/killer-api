@@ -11,12 +11,14 @@
 |
 */
 
+Route::get('/', function()
+{
+    App::abort(404);
+});
+
 Route::group(array('prefix' => 'v1'), function()
 {
-
     Route::controller('api', 'ApiV1Controller');
-
 });
 
 Route::controller('users', 'UsersController');
-	
