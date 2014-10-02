@@ -21,4 +21,9 @@ Route::group(array('prefix' => 'v1'), function()
     Route::controller('api', 'ApiV1Controller');
 });
 
+Route::group(array('prefix' => 'v1'), function()
+{
+    Route::controller('my-site', 'MySiteV1Controller');
+});
+
 Route::controller('users', 'UsersController');
